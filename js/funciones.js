@@ -1,28 +1,10 @@
 
 
-function agregardatos(nombre,apellido,email,telefono){
+// function agregardatos(nombreApellido,parentesco,edad,profesionOcupacion,tipo,DisEnf){
+// 	alert(nombreApellido);
+// 	$("#tabla>tbody").append("<tr><td>"+nombreApellido+"</td><td>"+parentesco+"</td><td>"+edad+"</td><td>"+profesionOcupacion+"</td><td>"+tipo+"</td><td>"+DisEnf+"</td></tr>");
 
-	cadena="nombre=" + nombre + 
-			"&apellido=" + apellido +
-			"&email=" + email +
-			"&telefono=" + telefono;
-
-	$.ajax({
-		type:"POST",
-		url:"php/agregarDatos.php",
-		data:cadena,
-		success:function(r){
-			if(r==1){
-				$('#tabla').load('componentes/tabla.php');
-				 $('#buscador').load('componentes/buscador.php');
-				alertify.success("agregado con exito :)");
-			}else{
-				alertify.error("Fallo el servidor :(");
-			}
-		}
-	});
-
-}
+// }
 
 function agregaform(datos){
 

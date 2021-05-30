@@ -17,9 +17,11 @@
 
 	<script src="librerias/jquery-3.2.1.min.js"></script>
   <script src="js/funciones.js"></script>
+  <script src="js/validaciones.js"></script>
 	<script src="librerias/bootstrap/js/bootstrap.js"></script>
 	<script src="librerias/alertifyjs/alertify.js"></script>
   <script src="librerias/select2/js/select2.js"></script>
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
@@ -34,17 +36,24 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Agrega nueva persona</h4>
+        <h4 class="modal-title" id="myModalLabel">Agrega nuevo familiar</h4>
       </div>
-      <div class="modal-body">
-        	<label>Nombre</label>
-        	<input type="text" name="" id="nombre" class="form-control input-sm">
-        	<label>Apellido</label>
-        	<input type="text" name="" id="apellido" class="form-control input-sm">
-        	<label>Email</label>
-        	<input type="text" name="" id="email" class="form-control input-sm">
-        	<label>telefono</label>
-        	<input type="text" name="" id="telefono" class="form-control input-sm">
+      <div class="modal-body" id="divFormulario">
+        	<label>Apellidos y Nombres</label>
+        	<input type="text" name="" id="nombreApellido" class="form-control input-sm">
+        	<label>Parentesco</label>
+        	<input type="text" name="" id="parentesco" class="form-control input-sm">
+        	<label>Edad</label>
+        	<input type="number" name="" id="edad" class="form-control input-sm">
+        	<label>Profesión/Ocupación</label>
+        	<input type="text" name="" id="profesionOcupacion" class="form-control input-sm">
+            <label>Discapacidad o enfermedad crónica</label><br>
+            <input type="radio" id="siDis-Enf" name="Dis-Enf" value="Si">
+            <label for="si">Si</label><br>
+            <input type="radio" id="noDis-Enf" name="Dis-Enf" value="No">
+            <label for="no">No</label><br>
+            <label id="labelTipo">Tipo</label>
+            <input type="text" name="tipo" id="tipo" class="form-control input-sm">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal" id="guardarnuevo">
@@ -66,15 +75,21 @@
         <h4 class="modal-title" id="myModalLabel">Actualizar datos</h4>
       </div>
       <div class="modal-body">
-      		<input type="text" hidden="" id="idpersona" name="">
-        	<label>Nombre</label>
-        	<input type="text" name="" id="nombreu" class="form-control input-sm">
-        	<label>Apellido</label>
-        	<input type="text" name="" id="apellidou" class="form-control input-sm">
-        	<label>Email</label>
-        	<input type="text" name="" id="emailu" class="form-control input-sm">
-        	<label>telefono</label>
-        	<input type="text" name="" id="telefonou" class="form-control input-sm">
+        <label>Apellidos y Nombres</label>
+        	<input type="text" name="" id="nombreApellidoActualizar" class="form-control input-sm">
+        	<label>Parentesco</label>
+        	<input type="text" name="" id="parentescoActualizar" class="form-control input-sm">
+        	<label>Edad</label>
+        	<input type="number" name="" id="edadActualizar" class="form-control input-sm">
+        	<label>Profesión/Ocupación</label>
+        	<input type="text" name="" id="profesionOcupacionActualizar" class="form-control input-sm">
+            <label>Discapacidad o enfermedad crónica</label><br>
+            <input type="radio" id="siDis-EnfActualizar" name="Dis-Enf" value="Si">
+            <label for="si">Si</label><br>
+            <input type="radio" id="noDis-EnfActualizar" name="Dis-Enf" value="No">
+            <label for="no">No</label><br>
+            <label id="labelTipo">Tipo</label>
+            <input type="text" name="tipo" id="tipoActualizar" class="form-control input-sm">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-warning" id="actualizadatos" data-dismiss="modal">Actualizar</button>
@@ -92,21 +107,40 @@
 		$('#tabla').load('componentes/tabla.php');
 	});
 </script>
-
+<script src="js/funciones.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){
         $('#guardarnuevo').click(function(){
-          nombre=$('#nombre').val();
-          apellido=$('#apellido').val();
-          email=$('#email').val();
-          telefono=$('#telefono').val();
-            agregardatos(nombre,apellido,email,telefono);
+          nombreApellido=$('#nombreApellido').val();
+          //alert(nombreApellido);
+          parentesco=$('#parentesco').val();
+          //alert(parentesco);
+          edad=$('#edad').val();
+          //alert(edad);
+          profesionOcupacion=$('#profesionOcupacion').val();
+          //alert(profesionOcupacion);
+          tipo=$('#tipo').val();
+          //alert(tipo);
+          DisEnf=$("input[name='Dis-Enf']").val();
+          alert(DisEnf);
+          
+            agregardatos(nombreApellido,parentesco,edad,profesionOcupacion,tipo,DisEnf);
         });
 
+        function agregardatos(nombreApellido,parentesco,edad,profesionOcupacion,tipo,DisEnf){
+        alert(DisEnf);
+        if(DisEnf=="Si"){
+            alert("Si");
+            $("#tabla>tbody").append("<tr><td>"+nombreApellido+"</td><td>"+parentesco+"</td><td>"+edad+"</td><td>"+profesionOcupacion+"</td><td>"+DisEnf+"</td><td></td><td>"+tipo+"</td></tr>");
 
+        }else if(DisEnf=="No"){
+            alert("No");
+	        $("#tabla>tbody").append("<tr><td>"+nombreApellido+"</td><td>"+parentesco+"</td><td>"+edad+"</td><td>"+profesionOcupacion+"</td><td></td><td>"+DisEnf+"</td><td>"+tipo+"</td></tr>");
+
+        }
 
         $('#actualizadatos').click(function(){
-          actualizaDatos();
+          //actualizaDatos();
         });
 
     });
