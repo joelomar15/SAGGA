@@ -1,4 +1,4 @@
-window.onload = function () {
+$(document).ready(function(){
     $("#labelTipo,#tipo").css({
         "display": "none"
     }); 
@@ -23,4 +23,4 @@ window.onload = function () {
         });
       });
 
-}
+});

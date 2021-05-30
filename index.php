@@ -122,21 +122,22 @@
           tipo=$('#tipo').val();
           //alert(tipo);
           DisEnf=$("input[name='Dis-Enf']").val();
-          alert(DisEnf);
+          //alert(DisEnf);
           
             agregardatos(nombreApellido,parentesco,edad,profesionOcupacion,tipo,DisEnf);
         });
 
         function agregardatos(nombreApellido,parentesco,edad,profesionOcupacion,tipo,DisEnf){
-        alert(DisEnf);
-        if(DisEnf=="Si"){
-            alert("Si");
-            $("#tabla>tbody").append("<tr><td>"+nombreApellido+"</td><td>"+parentesco+"</td><td>"+edad+"</td><td>"+profesionOcupacion+"</td><td>"+DisEnf+"</td><td></td><td>"+tipo+"</td></tr>");
+            //alert(DisEnf);
+            if(DisEnf=="Si"){
+                alert("Si");
+                $("#tabla>tbody").append("<tr><td>"+nombreApellido+"</td><td>"+parentesco+"</td><td>"+edad+"</td><td>"+profesionOcupacion+"</td><td>"+DisEnf+"</td><td></td><td>"+tipo+"</td><td></td></tr>");
 
-        }else if(DisEnf=="No"){
-            alert("No");
-	        $("#tabla>tbody").append("<tr><td>"+nombreApellido+"</td><td>"+parentesco+"</td><td>"+edad+"</td><td>"+profesionOcupacion+"</td><td></td><td>"+DisEnf+"</td><td>"+tipo+"</td></tr>");
+            }else if(DisEnf=="No"){
+                alert("No");
+                $("#tabla>tbody").append("<tr><td>"+nombreApellido+"</td><td>"+parentesco+"</td><td>"+edad+"</td><td>"+profesionOcupacion+"</td><td></td><td>"+DisEnf+"</td><td>"+tipo+"</td><td></td></tr>");
 
+            }
         }
 
         $('#actualizadatos').click(function(){
