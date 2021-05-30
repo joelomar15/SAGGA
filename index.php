@@ -24,12 +24,10 @@
 <body>
 
 	<div class="container">
-    <div id="buscador"></div>
-		<div id="tabla"></div>
+	<div id="tabla"></div>
 	</div>
 
 	<!-- Modal para registros nuevos -->
-
 
 <div class="modal fade" id="modalNuevo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog modal-sm" role="document">
@@ -92,7 +90,6 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		$('#tabla').load('componentes/tabla.php');
-    $('#buscador').load('componentes/buscador.php');
 	});
 </script>
 
