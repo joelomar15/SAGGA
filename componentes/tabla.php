@@ -16,12 +16,20 @@
 			</button>
 		</caption>
 			<tr>
-				<td>Nombre</td>
-				<td>Apellido</td>
-				<td>Email</td>
-				<td>Telefono</td>
-				<td>Editar</td>
-				<td>Eliminar</td>
+				<td>Apellidos y Nombres</td>
+				<td>Parentesco</td>
+				<td>Edad</td>
+				<td>Profesión/Ocupación</td>
+				<td>
+					Discapacidad o enfermedad crónica</tr>
+					<table>
+						<tr>
+							<td>SI</td>
+							<td>NO</td>
+							<td>TIPO</td>
+						</tr>
+					</table>
+				</td>
 			</tr>
 
 			<?php 
