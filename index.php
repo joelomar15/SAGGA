@@ -123,6 +123,7 @@
           //alert(tipo);
           DisEnf=$("input[name='Dis-Enf']").val();
           //alert(DisEnf);
+          //lo nuevo
           
             agregardatos(nombreApellido,parentesco,edad,profesionOcupacion,tipo,DisEnf);
         });
