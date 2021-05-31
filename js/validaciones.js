@@ -1,17 +1,12 @@
 $(document).ready(function(){
-    $("#labelTipo,#tipo").css({
-        "display": "none"
-    }); 
+    alert("asd");
+    $(".activarTipo").prop("disabled", true);
 
-    $("input[name='Dis-Enf']").click(function(event) {
+    $(".validarTipo").click(function(event) {
         if($(this).val()=="Si"){
-            $("#labelTipo,#tipo").css({
-                "display": "block"
-            }); 
+            $(".activarTipo").prop("disabled", false);
         }else{
-            $("#labelTipo,#tipo").css({
-                "display": "none"
-            });
+            $(".activarTipo").prop("disabled", true);
         }
     });
 

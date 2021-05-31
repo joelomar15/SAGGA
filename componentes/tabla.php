@@ -33,9 +33,7 @@
 			<td>NO</td>
 			<td>TIPO</td>
 		</tr>
-		<tbody>
-			
-		</tbody>
+	
 		</table>
 	</div>
 </div>

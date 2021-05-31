@@ -131,11 +131,11 @@
             alert(nombreApellido);
             if(DisEnf=="Si"){
                 //alert("Si");
-                $("#tabla>tbody").append("<tr><td>"+nombreApellido+"</td><td>"+parentesco+"</td><td>"+edad+"</td><td>"+profesionOcupacion+"</td><td>"+DisEnf+"</td><td></td><td>"+tipo+"</td><td>Eli</td><td>Edit</td></tr>");
+                $("#tabla").append("<tr><td>"+nombreApellido+"</td><td>"+parentesco+"</td><td>"+edad+"</td><td>"+profesionOcupacion+"</td><td>"+DisEnf+"</td><td></td><td>"+tipo+"</td><td>Eli</td><td>Edit</td></tr>");
 
             }else if(DisEnf=="No"){
                 //alert("No");
-                $("#tabla>tbody").append("<tr><td>"+nombreApellido+"</td><td>"+parentesco+"</td><td>"+edad+"</td><td>"+profesionOcupacion+"</td><td></td><td>"+DisEnf+"</td><td>"+tipo+"</td><td>Eli</td><td>Edit</td></tr>");
+                $("#tabla").append("<tr><td>"+nombreApellido+"</td><td>"+parentesco+"</td><td>"+edad+"</td><td>"+profesionOcupacion+"</td><td></td><td>"+DisEnf+"</td><td>"+tipo+"</td><td>Eli</td><td>Edit</td></tr>");
 
             }
             $("#guardarnuevo").click(function(event) {
