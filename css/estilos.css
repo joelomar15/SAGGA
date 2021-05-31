@@ -4,3 +4,45 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none; 
   margin: 0; 
 }
+/* 
+table{
+  background-color: rebeccapurple;
+}
+td{
+  padding: 0px;
+  border: 1px solid black;
+} */
+table {
+  width: 100%;
+  border: 1px solid #000;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 0;
+  border: 1px solid #000;
+
+}
+
+table tr td{
+  text-align: center;
+}
+
+table thead{
+  background-color: sandybrown;
+}
+
+input[type="text"]{
+  background-color: white;
+  width: 100%;
+  border: none;
+}
+
+input[type="button"]:hover{
+  cursor: pointer;
+}
+
+.Eliminar{
+  background-color: rgb(224, 182, 182);
+  width: 100%;
+  border: none;
+}

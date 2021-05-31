@@ -38,7 +38,7 @@ $(document).ready(function(){
       
       var tablaDatos= $("#tblDatos");	
       
-      tablaDatos.append("<tr><td><input type='text' name='nombreApellido"+contador+"' id='nombreApellido"+contador+"' class='' /></td><td><input type='text' name='parentesco"+contador+"' id='parentesco"+contador+"' class='' /></td><td><input type='text' name='edad"+contador+"' id='edad"+contador+"' class='' /></td><td><input type='text'  name='ProfesionOcupacion"+contador+"' id='ProfesionOcupacion"+contador+"' class='' /></td><td><input type='radio' id='siDis-Enf"+contador+"' name='Dis-Enf"+contador+"' value='Si' class='validarTipo"+contador+"' ></td><td><input type='radio' id='noDis-Enf"+contador+"' name='Dis-Enf"+contador+"' value='No' class='validarTipo"+contador+"' ></td><td><input type='text' name='tipo"+contador+"' id='tipo"+contador+"' class='activarTipo"+contador+"' /></td><td><input type='button' onclick='borrar(this)' value='ELIMINAR' /></td></tr>");
+      tablaDatos.append("<tr><td><input type='text' name='nombreApellido"+contador+"' id='nombreApellido"+contador+"' class='' /></td><td><input type='text' name='parentesco"+contador+"' id='parentesco"+contador+"' class='' /></td><td><input type='text' name='edad"+contador+"' id='edad"+contador+"' class='' /></td><td><input type='text'  name='ProfesionOcupacion"+contador+"' id='ProfesionOcupacion"+contador+"' class='' /></td><td><input type='radio' id='siDis-Enf"+contador+"' name='Dis-Enf"+contador+"' value='Si' class='validarTipo"+contador+"' ></td><td><input type='radio' id='noDis-Enf"+contador+"' name='Dis-Enf"+contador+"' value='No' class='validarTipo"+contador+"' ></td><td><input type='text' name='tipo"+contador+"' id='tipo"+contador+"' class='activarTipo"+contador+"' /></td><td><input type='button' class='Eliminar' onclick='borrar(this)' value='ELIMINAR' /></td></tr>");
       var classTipo=".activarTipo"+contador;
       $(classTipo).prop('disabled', true);
       var classOption = ".validarTipo"+contador;
@@ -52,4 +52,6 @@ $(document).ready(function(){
       });
       contador++;
     }
+
+    
 });
