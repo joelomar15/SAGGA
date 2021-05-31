@@ -15,12 +15,12 @@ $(document).ready(function(){
         }
     });
 
-    $("#guardarnuevo").click(function(event) {
-        $("#divFormulario input[name='Dis-Enf']").prop('checked',false);
-        $("#divFormulario input[type='text'],input[type='number']").val('');
-        $("#labelTipo,#tipo").css({
-            "display": "none"
-        });
-      });
+    // $("#guardarnuevo").click(function(event) {
+    //     $("#divFormulario input[name='Dis-Enf']").prop('checked',false);
+    //     $("#divFormulario input[type='text'],input[type='number']").val('');
+    //     $("#labelTipo,#tipo").css({
+    //         "display": "none"
+    //     });
+    //   });
 
 });
