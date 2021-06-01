@@ -28,8 +28,8 @@
           <th rowspan="2">Parentesco</th>
           <th rowspan="2">Fecha de nacimiento</th>
           <th rowspan="2">Profesión/Ocupación</th>
-          <th colspan="3">
-          Discapacidad o enfermedad crónica 
+          <th rowspan="2">Sueldo</th>
+          <th colspan="3">Discapacidad o enfermedad crónica</th>
           <th rowspan="2">Eliminar</th>
         </tr>	               
         <tr>
@@ -38,8 +38,8 @@
           <th>TIPO</th>
         </tr>
       </thead>
-      <thead id="tabla">
-      </thead>
+      <tbody id="tabla">
+      </tbody>
     </table>
 
   
