@@ -26,7 +26,7 @@
         <tr>
           <th rowspan="2">Apellidos y Nombres</th>
           <th rowspan="2">Parentesco</th>
-          <th rowspan="2">Edad</th>
+          <th rowspan="2">Fecha de nacimiento</th>
           <th rowspan="2">Profesión/Ocupación</th>
           <th colspan="3">
           Discapacidad o enfermedad crónica 
